@@ -14,20 +14,27 @@ class producto {
     this.cantidad = cantidad;
     this.tela = tela;
 }
+
+// ESTA PARTE NO ME FUNCIONA Y NO SÉ PORQUÉ 
+toString(){
+return producto: ${this.nombre}\n Color: ${this.color}\n Cantidad: ${this.cantidad}\n Tela: ${this.tela};
 }
+}
+
 
 const nombre = prompt ("Ingrese el nombre del producto");
 const color = prompt ("Seleccione el color");
 const cantidad =  Number(prompt("¿Qué cantidad desea?"));
-const tela = prompt ("¿Qué tipo de tela?")
-
+const tela = prompt ("¿Qué tipo de tela?");
+const comprador1 = new producto (nombre, color, cantidad, tela);
+alert (comprador1.toString());
 
 alert ("El precio del producto con descuento es de $" + nuevoPrecio*cantidad + " (IVA incluido)");
-let finalizarCompra = prompt ("desea confirmar la compra?");
+let finalizarCompra = prompt ("¿Desea confirmar la compra?");
 
 
 if ((finalizarCompra == "si") || (finalizarCompra == "SI")) {
-    alert ("felicitaciones! su compra ha sido confirmada")
+    alert ("FELICITACIONES! su compra ha sido confirmada")
     }
 else {
     alert ("Su compra ha sido cancelada")
